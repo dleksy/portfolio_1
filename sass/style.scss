@@ -1,0 +1,405 @@
+@import 'colors';
+@import 'animation';
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-padding-top: 82px;
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+	position: relative;
+	background-color: $bg-color;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.underline {
+	width: 60px;
+	height: 4px;
+	background-color: $main-color;
+	margin: 0 auto 40px;
+}
+
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.8);
+	transition: background-color 0.6s;
+}
+
+nav {
+	text-transform: uppercase;
+	transition: background-color 0.6s;
+	a,
+	i {
+		color: $white;
+	}
+	.nav-link {
+		color: $white;
+	}
+
+	a:hover {
+		color: $main-color;
+	}
+
+	.nav-link:hover {
+		color: $main-color;
+	}
+
+	.active {
+		color: $main-color;
+	}
+	z-index: 1;
+}
+.navbar-brand {
+	font-weight: bold;
+}
+
+.fa-bars {
+	padding: 10px;
+}
+
+#gamers {
+	color: $main-color;
+}
+
+// header
+
+header {
+	color: $white;
+
+	h1 {
+		text-transform: uppercase;
+	}
+
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url('../img/playsmall640.jpg');
+		background-position: center;
+		background-size: cover;
+		width: 100%;
+		z-index: 0;
+	}
+	.hero-shadow {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -10;
+	}
+
+	.hero-text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+		width: 100%;
+		padding: 10px;
+		text-align: center;
+		z-index: 5;
+	}
+	@media (min-width: 1200px) {
+		.hero-img {
+			background-image: url('../img/playbig920.jpg');
+		}
+	}
+	.btn-outline-light {
+		text-transform: uppercase;
+	}
+
+	.fa-chevron-down {
+		// position: absolute;
+		font-size: 30px;
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		color: $white;
+	}
+}
+
+.aboutus {
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+	.aboutus-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+	.aboutus-card-text {
+		font-size: 14px;
+	}
+	
+	.aboutus-hover:hover {
+		color: $main-color;
+	}
+}
+
+.aboutus-hero {
+	position: relative;
+	background-image: url('../img/technology_small.jpg');
+	background-size: cover;
+	background-position: center;
+	z-index: 0;
+
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+	.aboutus-card-title {
+		font-size: 18px;
+		// text-transform: uppercase;
+	}
+	.aboutus-card-text {
+		font-size: 14px;
+	}
+	.aboutus-hover {
+		transition: color 0.5s;
+	}
+
+	.aboutus-hover:hover {
+		color: $main-color;
+	}
+	color: $white;
+
+	@media (min-width: 992px) {
+	}
+	.aboutus-hero-item {
+		margin: 20px 0;
+		i {
+			font-size: 36px;
+		}
+		.aboutus-hero-title {
+			font-size: 24px;
+		}
+	}
+}
+
+.shadow-aboutus {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: -10;
+}
+
+.carousel {
+	img {
+		width: 1280px;
+		height: 660px;
+	}
+	.carousel-item {
+		position: relative;
+	}
+	.carousel-caption {
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.5);
+		left: 0%;
+		right: 0%;
+	}
+	.carousel-indicators {
+		padding-bottom: 20px;
+	}
+}
+
+.prices {
+	.full-pack {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	.underline-prices {
+		height: 2px;
+		width: 300px;
+		background-color: $bg-color;
+		margin: 15px auto;
+	}
+	h3 {
+		text-transform: uppercase;
+		color: $main-color;
+	}
+	.prices-elements {
+		font-weight: bold;
+	}
+	.btn {
+		text-transform: uppercase;
+	}
+	.price {
+		font-weight: bold;
+		font-size: 24px;
+	}
+	.price-box {
+		padding: 30px;
+		background-color: $white;
+		border-bottom: 1px solid;
+		border-right: 1px solid;
+		box-shadow: 5px 5px 3px grey;
+		transition: transform 0.5s;
+	}
+
+	.price-box:hover {
+		transform: scale(1.05);
+	}
+	.price-info {
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+.team {
+	//desktop
+	position: relative;
+	background-image: url(/img/conference-room-g44b932128_1920.jpg);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 0;
+
+	
+
+	h2{
+		color: $white;
+	}
+	.team-shadow{
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0,0,0,.5);
+		z-index: -10;
+	}
+
+	.card{
+		transition: transform 0.5s;
+		img{
+			height: 300px;
+			object-fit: cover;
+		}
+		i{
+			padding: 10px;
+		}
+	}
+	.card-group {
+		padding: 30px;
+	}
+	.card-footer {
+		i {
+			color: $main-color;
+		}
+	}
+	.card-body{
+		height: 160px;
+	}
+
+	.card-title{
+		margin-bottom: 20px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.card:hover{
+		transform: scale(0.95);
+	}
+}
+
+.achievements{
+	// height: 400px;
+	.icon-field{
+		text-align: center;
+		padding-top: 15px;
+		font-size: 36px;
+		color: $white;
+		text-shadow: 0 0 5px royalblue;
+		margin-bottom: 1px;
+	}
+	.percent{
+		text-align: center;
+	}
+	.achievement-description{
+		text-align: center;
+	}
+}
+
+.contact{
+	position: relative;
+	background-image: url(../img/skyline-g55cab219e_1920.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	color: $white;
+	z-index: 0;
+	.underline{
+		background-color: $white;
+	}
+
+	.contact-shadow{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0,0,0,.7);
+		top: 0;
+		z-index: -10;
+	}
+	.social-media{
+		i{
+			color: $white;
+			font-size: 24px;
+			padding: 15px;
+		}
+	}
+
+	h3{
+		text-transform: uppercase;
+	}
+	
+}
+
+@media (max-width: 992px) {
+	.carousel {
+		display: none;
+	}
+}
+
+@media (min-width: 375px) {
+	header {
+		h1 {
+			font-size: 36px;
+		}
+
+		p {
+			font-size: 16px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	html {
+		scroll-padding-top: 72px;
+	}
+	.aboutus-hero {
+		background-image: url('../img/technology_big.jpg');
+		background-position: 50% 55%;
+	}
+}
+
+@media (min-width: 768px) {
+	header {
+		h1 {
+			font-size: 42px;
+		}
+
+		p {
+			font-size: 24px;
+		}
+	}
+}
